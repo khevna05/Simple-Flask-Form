@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Form</title>
+
+    <style>
+      body{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container{
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        width: 40%;
+        height: 650px;
+        background-color: aliceblue;
+      }
+
+      .container h3{
+        text-align: center;
+        color: rgb(7, 65, 141);
+      }
+
+      .container label{
+        margin-bottom: 5px;
+        font-size: 18px;
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <h3>Submit your details</h3>
+      <form action="{{ url_for('home') }}" method="POST">
+        <div class="mb-3">
+            <label>Name</label>
+            <input type="text" class="form-control" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label>Phone</label>
+            <input type="text" class="form-control" name="phone" required>
+        </div>
+        <div class="mb-3">
+            <label>Age</label>
+            <input type="number" class="form-control" name="age" required>
+        </div>
+        <div class="mb-3">
+            <label>Gender</label>
+            <select class="form-control" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label>Address</label>
+            <textarea class="form-control" name="address" required></textarea>
+        </div>
+
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <a href="{{ url_for('user') }}" class="btn btn-info">View User</a>
+        </div>
+        
+      </form>
+
+    </div>
+    
+
+    
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
