@@ -42,3 +42,5 @@ Usage
 
 Database Setup
 The application uses SQLite as the database. The schema is automatically created when running the application for the first time.
+
+
